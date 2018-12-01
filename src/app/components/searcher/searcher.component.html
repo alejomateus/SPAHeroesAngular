@@ -1,0 +1,13 @@
+<h1>Searcher: <small>{{term}}</small></h1>
+<hr>
+
+<div class="row" *ngIf="heroes.length ==0">
+  <div class="col-md-12">
+    <div class="alert alert-danger">
+      <strong>Ups!</strong> There are no results with this search
+    </div>    
+  </div>
+</div>
+<div class="card-columns">
+    <app-card-searchheroe [heroe]="heroe" [index]="heroe.id" *ngFor="let heroe of heroes,let i = index"></app-card-searchheroe>
+</div>
